@@ -8,14 +8,42 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
+	@StateObject var connectivity = Connectivity()
+
+	var body: some View {
+
+		VStack {
+			Spacer()
+			Text(connectivity.receivedText)
+			Spacer()
+			
+			Button("Message", action: sendMessage)
+			Button("Context", action: sendContext)
+			Button("File", action: sendFile)
+			Button("Complication", action: sendComplication)
+			Spacer()
+		}
+	}
+
+	func sendMessage() {
+
+	}
+
+	func sendContext() {
+
+	}
+
+	func sendFile() {
+
+	}
+
+	func sendComplication() {
+
+	}
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+	static var previews: some View {
+		ContentView()
+	}
 }
